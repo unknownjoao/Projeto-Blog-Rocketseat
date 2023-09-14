@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --purple-bg: #290742;
-    --dark-bg: #170027;
-    --button-bg: #9e6dc2;
-    --white: #fff;
-    --light-purple: #fbf6ff;
-    --green: #4fff4b;
+    --purple-bg: #290742; /* Cor de fundo roxa */
+    --dark-bg: #170027; /* Cor de fundo escura */
+    --button-bg: #9e6dc2; /* Cor de fundo do botão */
+    --white: #fff; /* Cor branca */
+    --light-purple: #fbf6ff; /* Cor roxa clara */
+    --green: #4fff4b; /* Cor verde */
 }
 
+/* Zerar margens e preenchimentos padrão */
 * {
     margin: 0;
     padding: 0;
 }
 
-
+/* Estilos para cabeçalho e conteúdo principal */
 header,
 main {
     padding: 3% 20%;
 }
 
+/* Estilos do cabeçalho */
 header {
     background: var(--purple-bg);
     display: flex;
@@ -28,6 +30,7 @@ header {
     border-bottom: 6px solid var(--green);
 }
 
+/* Estilos da entrada de pesquisa */
 .search-input {
     display: flex;
 }
@@ -38,6 +41,16 @@ header {
     padding-left: 20px;
     background-color: var(--dark-bg);
     border: none;
+    border-radius: 4px 0px 0px 4px;
+    color: var(--light-purple);
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--light-purple);
 }
 
 .search-input button {
@@ -45,8 +58,14 @@ header {
     height: auto;
     background-color: var(--button-bg);
     border: none;
+    border-radius: 0px 4px 4px 0px;
 }
 
+.search-input button:hover {
+    background-color: #7602c9;
+}
+
+/* Estilos do cabeçalho cabecalho */
 .header-cabecalho {
     display: flex;
     justify-content: space-between;
@@ -74,6 +93,7 @@ header {
     border-left: 3px solid var(--green);
 }
 
+/* Estilos principal do cabeçalho */
 .header-principal {
     display: flex;
 }
@@ -104,14 +124,28 @@ header {
     font-family: Roboto;
     font-size: 18px;
     font-weight: 700;
+    border: 3px solid transparent;
 }
 
+.header-principal a:hover {
+    border-left: 3px solid var(--green);
+}
 
-
+/* Estilos para imagem em destaque */
 .feature-image {
     float: right;
 }
 
+/* Estilos para links em seções */
+section a {
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos da primeira seção */
 .first-section {
     display: flex;
     margin-bottom: 64px;
@@ -137,23 +171,26 @@ header {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 7px;
+    color: #000;
 }
 
+/* Estilos da linha horizontal */
 .linha {
     border-bottom: 2px solid var(--light-purple);
     padding-bottom: 16px;
 }
 
-.right-side span:nth-child(4) {
+/* Classe para margem superior */
+.mg-top {
     margin-top: 16px;
 }
 
+/* Estilos para o lado esquerdo e direito */
 .left-side {
     display: flex;
     flex-direction: column;
     flex: 40%;
 }
-
 
 .right-side {
     display: flex;
@@ -162,6 +199,7 @@ header {
     padding-left: 85px;
 }
 
+/* Estilos da seção de cartões */
 .card-section {
     display: flex;
     gap: 30px;
