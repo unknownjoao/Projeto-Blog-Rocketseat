@@ -119,6 +119,7 @@ input::placeholder {
 .header-principal a {
     display: flex;
     align-items: center;
+    width: 120px;
     text-decoration: none;
     color: var(--button-bg);
     font-family: Roboto;
